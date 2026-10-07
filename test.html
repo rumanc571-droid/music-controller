@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>This is Audio Time tracker website</h1>
+    <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" id="audio" controls type="audio/mpeg"></audio>
+    <p>Current Time : <span id="currentTime">00:00</span></p>
+    <p>Duration : <span id="duration">00:00</span></p>
+
+
+</body>
+
+<script>
+
+    const audio = document.getElementById('audio');
+    const currentTime = document.getElementById('currentTime');
+    const duration = document.getElementById('duration');
+
+    audio.addEventListener("timeupdate" ,()=>{
+        currentTime.textContent = audio.currentTime.toFixed(0)
+    })
+    audio.addEventListener("loadedmetadata" ,()=>{
+        duration.textContent = 
+        Math.floor (audio.duration/60) +":" +
+        Math.floor (audio.duration%60).toString().padStart(2,"0")
+    })
+
+
+
+</script>
+
+</html>

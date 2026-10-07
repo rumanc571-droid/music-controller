@@ -1,0 +1,48 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #141e30, #243b55);
+        color: white;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    audio {
+        width: min(500px, 90vw);
+        margin-bottom: 30px;
+        border-radius: 10px;
+    }
+
+    p {
+        width: min(500px, 90vw);
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px 20px;
+        margin: 8px 0;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+    }
+
+    #currentTime,
+    #duration {
+        color: #00e5ff;
+        font-weight: bold;
+    }
+
